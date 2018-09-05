@@ -1,0 +1,50 @@
+\documentclass[12pt,largemargins]{homework}
+
+  \newcommand{\hwname}{Phillip Janowski}
+  \newcommand{\hwemail}{pajmc2@mail.umsl.edu}
+  \newcommand{\hwtype}{Homework}
+  \newcommand{\hwnum}{1}
+  \newcommand{\hwclass}{CS3130}
+
+\usepackage{lipsum}
+\usepackage{lineno}
+\usepackage{amsmath}
+
+\date{Septemeber 6, 2018}
+\begin{document}
+\maketitle
+
+
+\question
+  \begin{alphaparts}
+
+  \item
+    Find $gcd(213486, 5423)$
+
+    \begin{linenumbers}
+      213486 / 5243 = 39 R 1989 \\
+      213486 = 5423 * 39 + 1989 \\
+      213486 / 1989 = 107 R 663 \\
+      213486 = 1989 * 107 + 663 \\
+      213486 / 663 = 332 R 0 
+
+    \end{linenumbers}
+
+    $\therefore gcd(213486,5423) = 663 $
+
+
+  \item
+    Estimate approximately how many times faster it will be to find 
+    $gcd(213486, 5423)$ with the help of the Euclid’s algorithm compared with the algorithm based on checking consecutive integers from min{m, n} down to gcd(m, n) (see the algorithm \#2 from the handout). You may only count the number of modulus divisions of the largest integer by different divisors.
+
+
+    \begin{linenumbers}
+      $min(213486,5423) = 5423$ \\
+      $m/t \neq 0 $ where $m=213486$ and $ t=5423 $
+      $t-1 = 5422 $ \\
+      $m-gcd(213486, 5423) = 4760$ steps \\
+      $4760$ steps $/4$ steps $=1190$ times faster 
+    \end{linenumbers}
+
+\end{alphaparts}
+\end{document}
