@@ -164,4 +164,6 @@ if A[i] != v
      i = null
 \end{verbatim}
 This loop is invariant because at the beginning we have $i = 0$ at ininitialization. Maintenance, because it maintains while $i < length$ of A or $v \neq A[i]$ and is true before i and i + 1. And Termination, because it only terminates when v is found in A or when we run out of elements in A to check
+\question
+The average performance of the linear search is $O(\dfrac{n}{2})$. The worst performance would happen from v being in the $A.length$th position of the array and the best would happen from v being in the 1st position of the array. In a set of completely random runs the average number of comparisons would eventually converge on $\dfrac{n}{2}$.
 \end{document}
