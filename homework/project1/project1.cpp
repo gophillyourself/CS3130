@@ -1,8 +1,8 @@
 #include <iostream>
 #include <chrono>
 
-int counter = 0;
-int nth = 0;
+double counter = 0;
+double nth = 0;
 
 using namespace std;
 using namespace std::chrono;
@@ -25,8 +25,8 @@ int main() {
     high_resolution_clock::time_point itert2 = high_resolution_clock::now();
     auto fibIterDuration = duration_cast<microseconds>( itert2 - itert1 ).count();
 
-    cout<<"fibRec = "<<fibRecOutput<<"fibRecDuration = "<<fibRecDuration<<endl;
-    cout<<"fibIt = "<<fibIterOutput<<"fibIterDuration = "<<fibIterDuration<<endl;
+    cout<<"fibRec = "<<fibRecOutput<<" fibRecDuration = "<<fibRecDuration<<endl;
+    cout<<"fibIt = "<<fibIterOutput<<" fibIterDuration = "<<fibIterDuration<<endl;
     return 0;
 }
 
