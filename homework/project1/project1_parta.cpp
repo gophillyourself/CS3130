@@ -14,6 +14,6 @@ int main(int argc, char** argv) {
     nth = stod(argv[1]);
     cout<<"Recursive fibonacci"<<endl;
     cout<<"Fibonacci "<<nth<<endl;
-    cout<<"fibRec = "<<fibRec(nth, 1, 1, 0)<<endl;
+    cout<<"fibRec = "<<fib(nth)<<endl;
     return 0;
 }

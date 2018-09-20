@@ -1,13 +1,14 @@
 #include <iostream>
 #include "fibonnaci.h"
+
 using namespace std;
 
-double fibRec(double nth, double counter, double current, double last) {
-    if(counter == nth) {
-        return current;
+double fib(double n) {
+    if(n <= 2) {
+        return 1;
+    } else {
+        return fib(n-1) + fib(n-2);
     }
-    counter++;
-    return fibRec(nth, counter, current + last, current);
 }
 
 double fibIter(double nth) {

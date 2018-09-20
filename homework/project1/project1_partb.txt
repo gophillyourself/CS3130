@@ -1,7 +1,6 @@
 ---Part A Driver---
 #include <iostream>
 #include <chrono>
-#include <string>
 #include "fibonnaci.h"
 
 double counter = 0;
@@ -13,11 +12,13 @@ using namespace std::chrono;
 int main(int argc, char** argv) {
     string arg = argv[1];
     nth = stod(argv[1]);
-    cout<<"Recursive fibonacci"<<endl;
+    cout<<"Iterative fibonacci"<<endl;
     cout<<"Fibonacci "<<nth<<endl;
-    cout<<"fibRec = "<<fib(nth)<<endl;
+    cout<<"fibIter = "<<fibIter(nth)<<endl;
     return 0;
 }
+
+
 
 ---Fibonnaci Header---
 
@@ -27,7 +28,6 @@ int main(int argc, char** argv) {
 
 double fibRec(double nth, double counter, double current, double last);
 double fibIter(double nth);
-double fib(int n);
 
 #endif
 
@@ -58,16 +58,9 @@ double fibIter(double nth) {
     return current;
 }
 
-double fib(int n) {
-    if(n == 1) {
-        return 1;
-    } else {
-        return fib(n-1) + fib(n-2);
-    }
-}
-
----Part A Output---
+---Part B Output---
 
 
-Recursive fibonacci
+Iterative fibonacci
 Fibonacci 100
+fibIter = 3.54225e+20
