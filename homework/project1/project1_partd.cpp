@@ -51,7 +51,6 @@ void fibArrayRec(int n, int minus1[], int minus2[]) {
                 minus1[i] = sum;
             }
             minus2 = tempMinus1;
-            if(i == 0) {}
         }
     }
 }
