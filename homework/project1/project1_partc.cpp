@@ -13,14 +13,14 @@ int main(int argc, char** argv) {
     nth = stod(argv[1]);
 
     cout<<"Fibonacci to the "<<nth<<" term"<<endl;
-    high_resolution_clock::time_point rect1 = std::chrono::system_clock::now();
+    high_resolution_clock::time_point rect1 = chrono::system_clock::now();
     double fibRecOutput = fib(nth);
-    high_resolution_clock::time_point rect2 = std::chrono::system_clock::now();
+    high_resolution_clock::time_point rect2 = chrono::system_clock::now();
     auto fibRecDuration = duration_cast<microseconds>( rect2 - rect1 ).count();
 
-    high_resolution_clock::time_point itert1 = std::chrono::system_clock::now();
+    high_resolution_clock::time_point itert1 = chrono::system_clock::now();
     double fibIterOutput = fibIter(nth);
-    high_resolution_clock::time_point itert2 = std::chrono::system_clock::now();
+    high_resolution_clock::time_point itert2 = chrono::system_clock::now();
     auto fibIterDuration = duration_cast<microseconds>( itert2 - itert1 ).count();
 
     // cout<<"fibRec = "<<fibRecOutput<<" fibRecDuration = "<<fibRecDuration<<endl;

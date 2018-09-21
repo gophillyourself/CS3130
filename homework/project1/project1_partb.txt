@@ -1,4 +1,4 @@
----Part A Driver---
+---Part B Driver---
 #include <iostream>
 #include <chrono>
 #include "fibonnaci.h"
@@ -26,7 +26,7 @@ int main(int argc, char** argv) {
 #ifndef FIBONACCI_H
 #define FIBONACCI_H
 
-double fibRec(double nth, double counter, double current, double last);
+double fib(double n);
 double fibIter(double nth);
 
 #endif
@@ -34,14 +34,15 @@ double fibIter(double nth);
 ---Fibonnaci Implementation---
 #include <iostream>
 #include "fibonnaci.h"
+
 using namespace std;
 
-double fibRec(double nth, double counter, double current, double last) {
-    if(counter == nth) {
-        return current;
+double fib(double n) {
+    if(n <= 2) {
+        return 1;
+    } else {
+        return fib(n-1) + fib(n-2);
     }
-    counter++;
-    return fibRec(nth, counter, current + last, current);
 }
 
 double fibIter(double nth) {
@@ -62,5 +63,5 @@ double fibIter(double nth) {
 
 
 Iterative fibonacci
-Fibonacci 100
-fibIter = 3.54225e+20
+Fibonacci 20
+fibIter = 6765
