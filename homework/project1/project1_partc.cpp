@@ -3,7 +3,7 @@
 #include "fibonnaci.h"
 #include <sys/time.h>
 
-double nth = 0;
+long double nth = 0;
 
 using namespace std;
 using namespace std::chrono;
@@ -12,19 +12,21 @@ int main(int argc, char** argv) {
     string arg = argv[1];
     nth = stod(argv[1]);
 
+    std::chrono::time_point<std::chrono::system_clock> now = std::chrono::system_clock::now();
+
     cout<<"Fibonacci to the "<<nth<<" term"<<endl;
-    high_resolution_clock::time_point rect1 = chrono::system_clock::now();
-    double fibRecOutput = fib(nth);
-    high_resolution_clock::time_point rect2 = chrono::system_clock::now();
-    auto fibRecDuration = duration_cast<microseconds>( rect2 - rect1 ).count();
+    auto start = std::chrono::high_resolution_clock::now();
+    long double fibRecOutput = fib(nth);
+    auto finish = std::chrono::high_resolution_clock::now();
+    long double fibRecDuration = std::chrono::duration_cast<std::chrono::nanoseconds>(finish-start).count();
 
-    high_resolution_clock::time_point itert1 = chrono::system_clock::now();
-    double fibIterOutput = fibIter(nth);
-    high_resolution_clock::time_point itert2 = chrono::system_clock::now();
-    auto fibIterDuration = duration_cast<microseconds>( itert2 - itert1 ).count();
+    start = std::chrono::high_resolution_clock::now();
+    long double fibIterOutput = fibIter(nth);
+    finish = std::chrono::high_resolution_clock::now();
+    long double fibIterDuration = std::chrono::duration_cast<std::chrono::nanoseconds>(finish-start).count();
 
-    // cout<<"fibRec = "<<fibRecOutput<<" fibRecDuration = "<<fibRecDuration<<endl;
-    cout<<"fibIt = "<<fibIterOutput<<" fibIterDuration = "<<fibIterDuration<<endl;
+    cout<<"fibRec = "<<fibRecOutput<<" fibRecDuration (nanoseconds) = "<<fibRecDuration<<endl;
+    cout<<"fibIt = "<<fibIterOutput<<" fibIterDuration (nanoseconds)= "<<fibIterDuration<<endl;
     return 0;
 }
 

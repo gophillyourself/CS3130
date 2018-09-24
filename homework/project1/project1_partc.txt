@@ -1,0 +1,92 @@
+---Part C Driver---
+#include <iostream>
+#include <chrono>
+#include "fibonnaci.h"
+#include <sys/time.h>
+
+long double nth = 0;
+
+using namespace std;
+using namespace std::chrono;
+
+int main(int argc, char** argv) {
+    string arg = argv[1];
+    nth = stod(argv[1]);
+
+    std::chrono::time_point<std::chrono::system_clock> now = std::chrono::system_clock::now();
+
+    cout<<"Fibonacci to the "<<nth<<" term"<<endl;
+    auto start = std::chrono::high_resolution_clock::now();
+    long double fibRecOutput = fib(nth);
+    auto finish = std::chrono::high_resolution_clock::now();
+    long double fibRecDuration = std::chrono::duration_cast<std::chrono::nanoseconds>(finish-start).count();
+
+    start = std::chrono::high_resolution_clock::now();
+    long double fibIterOutput = fibIter(nth);
+    finish = std::chrono::high_resolution_clock::now();
+    long double fibIterDuration = std::chrono::duration_cast<std::chrono::nanoseconds>(finish-start).count();
+
+    cout<<"fibRec = "<<fibRecOutput<<" fibRecDuration (nanoseconds) = "<<fibRecDuration<<endl;
+    cout<<"fibIt = "<<fibIterOutput<<" fibIterDuration (nanoseconds)= "<<fibIterDuration<<endl;
+    return 0;
+}
+
+
+
+---Fibonnaci Header---
+
+
+#ifndef FIBONACCI_H
+#define FIBONACCI_H
+
+long double fib(long double n);
+long double fibIter(long double nth);
+
+#endif
+
+---Fibonnaci Implementation---
+#include <iostream>
+#include "fibonnaci.h"
+
+using namespace std;
+
+long double fib(long double n) {
+    if(n <= 2) {
+        return 1;
+    } else {
+        return fib(n-1) + fib(n-2);
+    }
+}
+
+long double fibIter(long double nth) {
+    double counter = 1;
+    long double current = 1;
+    long double last = 0;
+    long double temp = 0;
+    while(counter != nth) {
+        temp = current;
+        current = current + last;
+        last = temp;
+        counter++;
+    }
+    return current;
+}
+
+---Part C Output---
+
+
+Fibonacci to the 5 term
+fibRec = 5 fibRecDuration (nanoseconds) = 493
+fibIt = 5 fibIterDuration (nanoseconds)= 125
+Fibonacci to the 10 term
+fibRec = 55 fibRecDuration (nanoseconds) = 1525
+fibIt = 55 fibIterDuration (nanoseconds)= 141
+Fibonacci to the 20 term
+fibRec = 6765 fibRecDuration (nanoseconds) = 112534
+fibIt = 6765 fibIterDuration (nanoseconds)= 220
+Fibonacci to the 40 term
+fibRec = 1.02334e+08 fibRecDuration (nanoseconds) = 1.66526e+09
+fibIt = 1.02334e+08 fibIterDuration (nanoseconds)= 374
+Fibonacci to the 45 term
+fibRec = 1.1349e+09 fibRecDuration (nanoseconds) = 1.91976e+10
+fibIt = 1.1349e+09 fibIterDuration (nanoseconds)= 854

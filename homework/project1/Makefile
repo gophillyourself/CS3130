@@ -35,7 +35,7 @@ final:
 
 	#Part C
 	g++ project1_partc.cpp fibonnaci.cpp -o fibPartC
-	echo "---Part A Driver---" > project1_partc.txt
+	echo "---Part C Driver---" > project1_partc.txt
 	cat project1_partc.cpp >> project1_partc.txt
 	echo "\n" >> project1_partc.txt
 	echo "---Fibonnaci Header---" >> project1_partc.txt
@@ -45,10 +45,24 @@ final:
 	echo "---Fibonnaci Implementation---" >> project1_partc.txt
 	cat fibonnaci.cpp >> project1_partc.txt
 	echo "\n" >> project1_partc.txt
-	echo "---Part B Output---" >> project1_partc.txt
+	echo "---Part C Output---" >> project1_partc.txt
 	echo "\n" >> project1_partc.txt
+	./fibPartC 5 >> project1_partc.txt
+	./fibPartC 10 >> project1_partc.txt
 	./fibPartC 20 >> project1_partc.txt
+	./fibPartC 40 >> project1_partc.txt
+	./fibPartC 45 >> project1_partc.txt
 	cat project1_partc.txt
+
+	#Part D
+	echo "---Part D Program---" > project1_partd.txt
+	cat project1_partd.py >> project1_partd.txt
+	echo "\n" >> project1_partd.txt
+	echo "---Part D Output---" >> project1_partd.txt
+	echo "\n" >> project1_partd.txt
+	python project1_partd.py >> project1_partd.txt
+	cat project1_partd.txt
+
 partA:
 	g++ project1_parta.cpp fibonnaci.cpp -o fibPartA
 	./fibPartA 15

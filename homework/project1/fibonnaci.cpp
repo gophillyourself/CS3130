@@ -3,7 +3,7 @@
 
 using namespace std;
 
-double fib(double n) {
+long double fib(long double n) {
     if(n <= 2) {
         return 1;
     } else {
@@ -11,11 +11,11 @@ double fib(double n) {
     }
 }
 
-double fibIter(double nth) {
-    int counter = 1;
-    double current = 1;
-    double last = 0;
-    double temp = 0;
+long double fibIter(long double nth) {
+    double counter = 1;
+    long double current = 1;
+    long double last = 0;
+    long double temp = 0;
     while(counter != nth) {
         temp = current;
         current = current + last;

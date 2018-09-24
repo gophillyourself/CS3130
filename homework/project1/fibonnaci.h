@@ -1,7 +1,7 @@
 #ifndef FIBONACCI_H
 #define FIBONACCI_H
 
-double fib(double n);
-double fibIter(double nth);
+long double fib(long double n);
+long double fibIter(long double nth);
 
 #endif
