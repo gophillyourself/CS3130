@@ -13,8 +13,8 @@ int main(int argc, char** argv) {
     string arg = argv[1];
     nth = stod(argv[1]);
     cout<<"Iterative fibonacci"<<endl;
-    cout<<"Fibonacci "<<nth<<endl;
-    cout<<"fibIter = "<<fibIter(nth)<<endl;
+    cout<<"Fibonacci Number"<<nth<<endl;
+    cout<<" = "<<fibIter(nth)<<endl;
     return 0;
 }
 
@@ -63,5 +63,5 @@ long double fibIter(long double nth) {
 
 
 Iterative fibonacci
-Fibonacci 20
-fibIter = 6765
+Fibonacci Number20
+ = 6765

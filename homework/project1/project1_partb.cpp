@@ -12,8 +12,8 @@ int main(int argc, char** argv) {
     string arg = argv[1];
     nth = stod(argv[1]);
     cout<<"Iterative fibonacci"<<endl;
-    cout<<"Fibonacci "<<nth<<endl;
-    cout<<"fibIter = "<<fibIter(nth)<<endl;
+    cout<<"Fibonacci Number"<<nth<<endl;
+    cout<<" = "<<fibIter(nth)<<endl;
     return 0;
 }
 

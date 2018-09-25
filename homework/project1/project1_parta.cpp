@@ -13,7 +13,7 @@ int main(int argc, char** argv) {
     string arg = argv[1];
     nth = stod(argv[1]);
     cout<<"Recursive fibonacci"<<endl;
-    cout<<"Fibonacci "<<nth<<endl;
-    cout<<"fibRec = "<<fib(nth)<<endl;
+    cout<<"Fibonacci Number "<<nth<<endl;
+    cout<<" = "<<fib(nth)<<endl;
     return 0;
 }
