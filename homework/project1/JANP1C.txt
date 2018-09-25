@@ -76,17 +76,17 @@ long double fibIter(long double nth) {
 
 
 Fibonacci to the 5 term
-fibRec = 5 fibRecDuration (nanoseconds) = 367
-fibIt = 5 fibIterDuration (nanoseconds)= 125
+fibRec = 5 fibRecDuration (nanoseconds) = 278
+fibIt = 5 fibIterDuration (nanoseconds)= 105
 Fibonacci to the 10 term
-fibRec = 55 fibRecDuration (nanoseconds) = 1675
-fibIt = 55 fibIterDuration (nanoseconds)= 160
+fibRec = 55 fibRecDuration (nanoseconds) = 1346
+fibIt = 55 fibIterDuration (nanoseconds)= 145
 Fibonacci to the 20 term
-fibRec = 6765 fibRecDuration (nanoseconds) = 129682
-fibIt = 6765 fibIterDuration (nanoseconds)= 245
+fibRec = 6765 fibRecDuration (nanoseconds) = 106203
+fibIt = 6765 fibIterDuration (nanoseconds)= 223
 Fibonacci to the 40 term
-fibRec = 1.02334e+08 fibRecDuration (nanoseconds) = 1.68176e+09
-fibIt = 1.02334e+08 fibIterDuration (nanoseconds)= 412
+fibRec = 1.02334e+08 fibRecDuration (nanoseconds) = 1.64655e+09
+fibIt = 1.02334e+08 fibIterDuration (nanoseconds)= 385
 Fibonacci to the 45 term
-fibRec = 1.1349e+09 fibRecDuration (nanoseconds) = 1.89789e+10
-fibIt = 1.1349e+09 fibIterDuration (nanoseconds)= 418
+fibRec = 1.1349e+09 fibRecDuration (nanoseconds) = 1.82421e+10
+fibIt = 1.1349e+09 fibIterDuration (nanoseconds)= 434

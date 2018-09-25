@@ -1,0 +1,67 @@
+---Part B Driver---
+#include <iostream>
+#include <chrono>
+#include "fibonnaci.h"
+
+double counter = 0;
+double nth = 0;
+
+using namespace std;
+using namespace std::chrono;
+
+int main(int argc, char** argv) {
+    string arg = argv[1];
+    nth = stod(argv[1]);
+    cout<<"Iterative fibonacci"<<endl;
+    cout<<"Fibonacci "<<nth<<endl;
+    cout<<"fibIter = "<<fibIter(nth)<<endl;
+    return 0;
+}
+
+
+
+---Fibonnaci Header---
+
+
+#ifndef FIBONACCI_H
+#define FIBONACCI_H
+
+long double fib(long double n);
+long double fibIter(long double nth);
+
+#endif
+
+---Fibonnaci Implementation---
+#include <iostream>
+#include "fibonnaci.h"
+
+using namespace std;
+
+long double fib(long double n) {
+    if(n <= 2) {
+        return 1;
+    } else {
+        return fib(n-1) + fib(n-2);
+    }
+}
+
+long double fibIter(long double nth) {
+    double counter = 1;
+    long double current = 1;
+    long double last = 0;
+    long double temp = 0;
+    while(counter != nth) {
+        temp = current;
+        current = current + last;
+        last = temp;
+        counter++;
+    }
+    return current;
+}
+
+---Part B Output---
+
+
+Iterative fibonacci
+Fibonacci 20
+fibIter = 6765
