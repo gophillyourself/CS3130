@@ -25,8 +25,8 @@ int main(int argc, char** argv) {
     finish = std::chrono::high_resolution_clock::now();
     long double fibIterDuration = std::chrono::duration_cast<std::chrono::nanoseconds>(finish-start).count();
 
-    cout<<"fibRec = "<<fibRecOutput<<" fibRecDuration (nanoseconds) = "<<fibRecDuration<<endl;
-    cout<<"fibIt = "<<fibIterOutput<<" fibIterDuration (nanoseconds)= "<<fibIterDuration<<endl;
+    cout<<"fibRec = "<<fibRecOutput<<" Calculated Recursively in (nanoseconds) = "<<fibRecDuration<<endl;
+    cout<<"fibIt = "<<fibIterOutput<<" Calculated Iteratively in (nanoseconds) = "<<fibIterDuration<<endl;
     return 0;
 }
 
