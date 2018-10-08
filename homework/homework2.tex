@@ -1,0 +1,80 @@
+\documentclass[12pt,largemargins]{homework}
+
+  \newcommand{\hwname}{Phillip Janowski}
+  \newcommand{\hwemail}{pajmc2@mail.umsl.edu}
+  \newcommand{\hwtype}{Homework}
+  \newcommand{\hwnum}{2}
+  \newcommand{\hwlecture}{E}
+  \newcommand{\hwsection}{01}
+  \newcommand{\hwclass}{CS3130}
+
+\usepackage{graphicx}
+\usepackage{makecell}
+\usepackage{enumitem}
+\usepackage{multirow}
+\usepackage{amsmath}
+\usepackage{listings}
+
+
+\date{Septemeber 6, 2018}
+\begin{document}
+\maketitle
+\question
+Explain, if $3^{n + 1}$ is: $ O(3^n ) ; \Omega ( 3^n ) ; \Theta ( 3^n ) $.\\
+For $O(3^n)$\\
+$ 0\leq 3^{n+1} \leq C*3^n$\\
+$3^{n+1} = 3*3^n = C * 3^n \therefore 3^{n+1} \in O(3^n)$\\
+For $\Omega (3^n)$\\
+$3^{n+1} \geq C*3^n$\\
+$3^{n+1} = 3*3^n = C * 3^n \therefore 3^{n+1} \in \Omega(3^n)$\\
+NOT DONE $\downarrow$\\
+For $\Theta (3^n)$\\
+$C_1 * 3^n \leq 3^{n+1} \leq C_2*3^n$\\
+$3^{n+1} = 3*3^n = C * 3^n \therefore 3^{n+1} \in \Theta(3^n)$\\
+
+\question
+Explain, if $3^{3 n}$ is: $ O ( 3^n ) ; \Omega ( 3^n ) ; \Theta ( 3^n ).$\\
+$3^{3n} \notin O(3^n), \in \Omega(3^n), \notin \Theta(3^n)$\\
+$3^{3n}$ will always grow faster than any $C * 3^n$ therefore it will only be in $\Omega(3^n)$ $f(n)\geq C*g(n)$\\
+\question
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+$f(n)$&$g(n)$&$O$&$o$&$\Omega$&$\omega$&$\Theta$\\
+\hline
+$8^n$&$8^{n/2}$&No&No&Yes&Yes&No\\
+\hline
+$\sqrt{n^k} $(k being an even integer)$ $&$2^n$&Yes& Yes&No&Yes&No\\
+\hline
+$\log(n^n)$&$ln(n!)$\\
+\hline
+\end{tabular}\\
+$$\lim_{n\to\infty}\frac{f(n)}{g(n)}=
+\begin{cases} 
+      C \neq 0 & f(n) \in \Theta(g(n)) \leftrightarrow g(n) \in \Theta(f(n))\\
+      0 & f(n) \in o(g(n)) \rightarrow f(n) \in O(g(n))\\
+      \infty & f(n) \in \omega(g(n)) \rightarrow f(n) \in \Omega(g(n))\\
+   \end{cases}
+\,$$\\
+$f(n) \in \omega(g(n)) \leftrightarrow f(n) \in o(g(n))$\\
+$\lim_{x\to\infty}\frac{8^x}{8^{x/2}}\rightarrow\lim_{x\to\infty}8^{x/2}=\infty\therefore 8^n \in \Omega (8^{x/2}), \in \omega(8^{n/2})$\\
+$\lim_{x\to\infty} \frac{\sqrt{x^k}}{2^x}$\\
+$\sqrt{1x^k}$ results in a polynomial function and $2^n$ is exponential\\
+$\therefore \lim_{x\to\infty} \frac{\sqrt{x^k}}{2^x} = 0$ and is $o(g(n)), \omega (g(n))$ and $O(g(n))$\\
+
+\question
+$T ( n ) = 2 T ( n-1 ) + 1 ; T ( 1 ) = 5 .$\\
+$T(n) = 2T(n-1)+1 =  2(2T(n-2))+1 = 2^2T(n-2)+2+1$\\
+$=2^3T(T(n-3)+2^2+2+1 = 2^4T(n-4)+2^3+2^2+2+1$\\
+$=...=2^{n-1}T(1)+2^{n-2}+2^{n-3}+...+2+1$\\
+$=2^{n-1}*5+(1+2+2^2+...+2^{n-2})=2^{n-1}*5+\frac{2^{n-1}-1}{1}$\\
+$=6*2^{n-1}-1$
+\question
+For the recurrence $T(n)=
+\ \begin{cases} 
+      1 & n =1\\
+      3T(\frac{n}{3} +1 & n >1\\
+   \end{cases}
+\,$ show that $T(n) \in \Theta(n)$
+where $=3^k$\\
+
+\end{document}
