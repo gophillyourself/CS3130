@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.9.9)  8 OCT 2018 22:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.9.9)  8 OCT 2018 22:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1202,39 +1202,39 @@ LaTeX Info: Redefining \nameref on input line 21.
 \openout7 = `homework2.out'.
 
  ABD: EveryShipout initializing macros
-Underfull \hbox (badness 10000) in paragraph at lines 24--35
+Underfull \hbox (badness 10000) in paragraph at lines 24--34
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 37--41
+Underfull \hbox (badness 10000) in paragraph at lines 36--40
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 41--52
+Underfull \hbox (badness 10000) in paragraph at lines 40--51
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 57--64
 
  []
 
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 58--65
+Underfull \hbox (badness 10000) in paragraph at lines 64--66
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 65--67
+Underfull \hbox (badness 10000) in paragraph at lines 67--71
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 68--72
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 84--97
+Underfull \hbox (badness 10000) in paragraph at lines 83--96
 
  []
 
@@ -1242,73 +1242,73 @@ Underfull \hbox (badness 10000) in paragraph at lines 84--97
 <homework2_number7.jpg, id=34, 4625.28pt x 3468.96pt>
 File: homework2_number7.jpg Graphic file (type jpg)
 <use homework2_number7.jpg>
-Package pdftex.def Info: homework2_number7.jpg  used on input line 100.
+Package pdftex.def Info: homework2_number7.jpg  used on input line 99.
 (pdftex.def)             Requested size: 462.5551pt x 346.91632pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 102--106
+Underfull \hbox (badness 10000) in paragraph at lines 101--105
 
  []
 
 [4 <./homework2_number7.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 108--112
+Underfull \hbox (badness 10000) in paragraph at lines 107--111
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 112--116
+Underfull \hbox (badness 10000) in paragraph at lines 111--115
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 116--120
+Underfull \hbox (badness 10000) in paragraph at lines 115--119
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 120--123
+Underfull \hbox (badness 10000) in paragraph at lines 119--122
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 129--132
+Underfull \hbox (badness 10000) in paragraph at lines 128--131
 
  []
 
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 161--165
+Underfull \hbox (badness 10000) in paragraph at lines 160--164
 
  []
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 171--172
+Underfull \hbox (badness 10000) in paragraph at lines 170--171
 
  []
 
 [7]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 174.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 174.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 173.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 173.
  (./homework2.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 174.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 174.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 173.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 173.
 Package rerunfilecheck Info: File `homework2.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 174.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 173.
  )
-(\end occurred when \ifx on line 161 was incomplete)
-(\end occurred when \ifx on line 134 was incomplete)
-(\end occurred when \ifx on line 125 was incomplete)
-(\end occurred when \ifx on line 102 was incomplete)
-(\end occurred when \ifx on line 99 was incomplete)
-(\end occurred when \ifx on line 84 was incomplete)
-(\end occurred when \ifx on line 77 was incomplete)
-(\end occurred when \ifx on line 65 was incomplete)
-(\end occurred when \ifx on line 41 was incomplete)
-(\end occurred when \ifx on line 37 was incomplete)
+(\end occurred when \ifx on line 160 was incomplete)
+(\end occurred when \ifx on line 133 was incomplete)
+(\end occurred when \ifx on line 124 was incomplete)
+(\end occurred when \ifx on line 101 was incomplete)
+(\end occurred when \ifx on line 98 was incomplete)
+(\end occurred when \ifx on line 83 was incomplete)
+(\end occurred when \ifx on line 76 was incomplete)
+(\end occurred when \ifx on line 64 was incomplete)
+(\end occurred when \ifx on line 40 was incomplete)
+(\end occurred when \ifx on line 36 was incomplete)
 (\end occurred when \ifx on line 24 was incomplete) 
 Here is how much of TeX's memory you used:
  39266 strings out of 492982
  827715 string characters out of 6134897
- 945475 words of memory out of 5000000
+ 944475 words of memory out of 5000000
  42311 multiletter control sequences out of 15000+600000
  538674 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1327,7 +1327,7 @@ fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/t
 ype1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf/fonts/type1/public/cm
 -super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb>
 </usr/share/texmf/fonts/type1/public/cm-super/sfrm1728.pfb>
-Output written on homework2.pdf (7 pages, 4940188 bytes).
+Output written on homework2.pdf (7 pages, 4940117 bytes).
 PDF statistics:
  111 PDF objects out of 1000 (max. 8388607)
  86 compressed objects within 1 object stream
