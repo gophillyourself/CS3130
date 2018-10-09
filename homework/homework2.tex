@@ -66,9 +66,12 @@ From the following functions \\$ \sqrt{2}^{\log n},n^2,n!,\frac{3}{2}^n,n^3,\log
 \begin{itemize}
 	\item[1] 
 	Rank exponential functions according to their bases\\
-	$  \sqrt{2}^{\log n}, \frac{3}{2}^n,  n*2^n,2^{\log(n)}, 4^{\log n}, 2^n,$
+	$  \sqrt{2}^{\log n}, \frac{3}{2}^n,  n*2^n,2^{\log n}, 4^{\log n}, 2^n$\\
+	In order $ n*2^n, 2^n, \frac{3}{2}^n, 4^{\log n},2^{\log n},\sqrt{2}^{\log n}  = n^{\log \sqrt{2}}$\\
+	$ n^{\log \sqrt{2}} $ isn't an exponential function\\
 	\item[2]
 	Partition the functions into functions where $ f(n)\in \Theta g(n) $\\
+	$ n^2 $ and $ 4^{\log n} $, $ n* \log n $ and $ \log n! $
 \end{itemize}
 \question
 $T ( n ) = 2 T ( n-1 ) + 1 ; T ( 1 ) = 5 .$\\
@@ -84,7 +87,13 @@ For the recurrence $T(n)=
       3T(\frac{n}{3} +1 & n >1\\
    \end{cases}
 \,$ show that $T(n) \in \Theta(n)$
-where $=3^k$\\
+where $n=3^k, k = \log n$\\
+$ T(3^k) = 3T(3^{k-1}) +1 = 3T(3^{k-2}) + 2$\\
+$ =3T(2^{k-3}) + 3 ... = 3T(1) = 1 + k = C + \log n $\\
+Does not imply $ T(n) \in O(n) $, \\
+For $ d \geq 0, \rightarrow T(n) \geq C+\log n -d$ we can assume $T(n) \in O(n) $\\
+For $ C \geq 1, \rightarrow T(n) \geq C+\log n \therefore T(n) \in \Omega(n) $\\
+$ \therefore T(n) \in \Theta(n) $\\
 \newpage
 \question
 Use the recursion tree method to find a big-$ \Theta $ estimate for the solution of the recurrence$ T(n)=3T(\frac{n}{3})+n $\\
@@ -121,4 +130,45 @@ $ a>b^d \rightarrow T(n) \in \Theta(n^{\log_b a}) $\\
 	Will behave inversely of the quick sort of an array of all equal elements but will have the same run time.\\
 	Worst-case, the pivot of the array will always be at element 1 of the larger sub array, meaning one sub array being size 1 and the other being n-1, stepping up through all of the elements until the largest sub array is size 1.\\
 \end{alphaparts}
+\question 
+\begin{alphaparts}
+	\item 
+	Show exactly the progress of the QUICKSORT algorithm with the median-of-3 partition described in
+	the textbook for the array: <A, B, C, D, E, F>. Explain if strictly increasing arrays are the worst-case
+	input, the best-case input or neither for the given version of a QUICKSORT algorithm with the median-0f-3 partition.\\
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		A&B&C&D&E&F\\
+		\hline
+		\textbf{A}&B&\textbf{C}&D&E&\textbf{F}\\
+		\hline
+		A&B&\underline{\textbf{C}}&D&E&F\\
+	\end{tabular}\\
+	Median-of-three pivot for quicksorting a strictly increasing array is the worst-case because this will split the array in the middle causing the total number of key comparisons to be the smallest. This also results in a semi random pivot unless the array is already sorted
+	\item 
+	Show exactly the progress of the QUICKSORT algorithm with the median-of-3 partition described
+	in the textbook for the array: <F, E, D, C, B, A>. Explain if strictly decreasing arrays are the worst-case
+	input, the best-case input or neither for the given version of a QUICKSORT algorithm with the median-of-3 partition.\\
+		\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		A&B&C&D&E&F\\
+		\hline
+	\end{tabular}\\
+	As for strictly increasing arrays, median-of-three pivot for quicksorting a strictly decreasing array is the worst-case because this will split the array in the middle causing the total number of key comparisons to be the smallest.This also results in a semi random pivot unless the array is already sorted.
+	
+\end{alphaparts}
+\question
+There is one fake coin among 65 identically looking coins (the fake coin is lighter). In a balance scale, you can
+compare any two sets of coins. Develop the algorithm to determine a fake coin using not more than 4
+comparisons.\\
+\begin{itemize}
+\item[65 Coins] 
+By dividing the 65 coins into 2 sets of 30 and 1 set of 5, we will find what pile the coin is in. By weighing both stacks of 30, we can determine if the fake is in the set of 5, or in which stack of 30 it is in.
+\item[For the stack of 5] If the stacks of 30 weigh the same then we take the set of five and divide it into 2 sets of 2 and 1 set of 1 and weighing the sets of 2. Again if the stacks weigh the same we can determine that the left out penny is the fake, and if they are different weights, we can divide the lighter set of two and get the lighter penny on the fourth weigh.
+\item[For a stack of 30]
+Otherwise, we take the lighter of the two 30 sets and divide it into 3 set of ten and weigh two of them for our second weigh. Taking the lightest of the 3 piles, we can split them into sets of 4,4,2 for our 3rd weigh. If the sets of 4 weigh the same we weigh a fourth time, the 2 left over coins to determine the lighter of them
+\item[For the set of 4]
+For the fourth weigh, weigh both sets of 2 and take the lighter of the 2 sets, divide them in half, ask nicely for a fifth comparison, and weigh the two coins from the lighter set.\\
+\end{itemize}
+
 \end{document}
