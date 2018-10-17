@@ -1,4 +1,5 @@
 
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 
@@ -9,10 +10,16 @@ import java.util.stream.Collectors;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class Project2Test {
+    private static List<Integer> unsorted;
+
+    @BeforeAll
+    public static void setUp() {
+        unsorted = Project2.genArray(10000, 1, 10000);
+        System.out.println(unsorted);
+    }
 
     @Test
     public void selectionSortTest() {
-        List<Integer> unsorted = Project2.genArray(10000, 1, 10000);
         List<Integer> sorted = Project2.selectionSort(unsorted);
         checkSorted(sorted);
         checkContaining(sorted, unsorted);
@@ -20,13 +27,11 @@ class Project2Test {
         //just to make sure they aren't getting deep copied when getting sorted
         //if they did the check containing would be pointless
         assertTrue(!sorted.equals(unsorted));
-        System.out.println(unsorted);
         System.out.println(sorted);
     }
 
     @Test
     public void insertAndShiftTest() {
-        List<Integer> unsorted = Project2.genArray(10000, 1, 10000);
         List<Integer> sorted = Project2.insertionSort(unsorted);
         checkSorted(sorted);
         checkContaining(sorted, unsorted);
@@ -34,9 +39,19 @@ class Project2Test {
         //just to make sure they aren't getting deep copied when getting sorted
         //if they did the check containing would be pointless
         assertTrue(!sorted.equals(unsorted));
-        System.out.println(unsorted);
         System.out.println(sorted);
+    }
 
+    @Test
+    public void bubbleSort() {
+        List<Integer> sorted = Project2.bubbleSort(unsorted);
+        checkSorted(sorted);
+        checkContaining(sorted, unsorted);
+
+        //just to make sure they aren't getting deep copied when getting sorted
+        //if they did the check containing would be pointless
+        assertTrue(!sorted.equals(unsorted));
+        System.out.println(sorted);
     }
 
     private void checkSorted(List<Integer> sorted) {

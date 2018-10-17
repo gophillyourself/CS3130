@@ -2,21 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="737cde8f-8a72-47fe-a06d-63da25389557" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../project2/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../project2/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../project2/.idea/modules/gradle.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../project2/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../project2/src/Project2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../project2/src/Project2Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Project2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Project2Test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Homework2.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../Homework2.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../latex-homework-class" beforeDir="false" afterPath="$PROJECT_DIR$/../latex-homework-class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Project2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Project2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Project2Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Project2Test.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -53,34 +44,50 @@
     <session id="-969215833">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
-          <entry key="project.open.time.1" value="1" />
+          <entry key="project.closed" value="3" />
+          <entry key="project.open.time.1" value="3" />
           <entry key="project.open.time.5" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="gradle" value="1" />
-          <entry key="java" value="2" />
+          <entry key="bat" value="1" />
+          <entry key="class" value="2" />
+          <entry key="gitignore" value="1" />
+          <entry key="gradle" value="3" />
+          <entry key="gradlew" value="1" />
+          <entry key="iml" value="2" />
+          <entry key="java" value="6" />
+          <entry key="properties" value="6" />
+          <entry key="xml" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Groovy" value="1" />
-          <entry key="JAVA" value="2" />
+          <entry key="Bash" value="1" />
+          <entry key="Bat" value="1" />
+          <entry key="CLASS" value="2" />
+          <entry key="Groovy" value="3" />
+          <entry key="IDEA_MODULE" value="2" />
+          <entry key="JAVA" value="6" />
+          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="Properties" value="6" />
+          <entry key="XML" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
+          <entry key="gitignore" value="10" />
           <entry key="gradle" value="1" />
-          <entry key="java" value="1686" />
+          <entry key="java" value="2295" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Groovy" value="1" />
-          <entry key="JAVA" value="1686" />
+          <entry key="JAVA" value="2295" />
+          <entry key="PLAIN_TEXT" value="10" />
         </counts>
       </usages-collector>
     </session>
@@ -90,8 +97,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Project2.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="37" column="33" selection-start-line="37" selection-start-column="33" selection-end-line="37" selection-end-column="33" />
+            <state relative-caret-position="175">
+              <caret line="56" column="31" lean-forward="true" selection-start-line="56" selection-start-column="31" selection-end-line="56" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -102,8 +109,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/Project2Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="436">
-              <caret line="30" column="25" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
+            <state relative-caret-position="663">
+              <caret line="53" selection-start-line="53" selection-end-line="53" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -506,8 +513,9 @@
       <list>
         <option value="$PROJECT_DIR$/src/test/java/project2Test.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/src/test/java/Project2Test.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/main/java/Project2.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Project2Test.java" />
       </list>
     </option>
   </component>
@@ -517,9 +525,9 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="y" value="22" />
-    <option name="width" value="1680" />
+    <option name="width" value="840" />
     <option name="height" value="973" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -552,14 +560,14 @@
       </profile-state>
     </entry>
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -602,6 +610,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -639,7 +649,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.Project2Test.insertAndShiftTest">
+  <component name="RunManager" selected="JUnit.Project2Test">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -656,6 +666,15 @@
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Project2Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="project2java_test" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Project2Test" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -709,11 +728,13 @@
       <item itemvalue="Application.Project2" />
       <item itemvalue="JUnit.Project2Test.selectionSortTest" />
       <item itemvalue="JUnit.Project2Test.insertAndShiftTest" />
+      <item itemvalue="JUnit.Project2Test" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.Project2Test.insertAndShiftTest" />
+        <item itemvalue="JUnit.Project2Test" />
         <item itemvalue="Application.Project2" />
+        <item itemvalue="JUnit.Project2Test.insertAndShiftTest" />
         <item itemvalue="JUnit.Project2Test.selectionSortTest" />
       </list>
     </recent_temporary>
@@ -729,7 +750,9 @@
       <option name="presentableId" value="Default" />
       <updated>1539717275196</updated>
       <workItem from="1539717277329" duration="384000" />
-      <workItem from="1539717689004" duration="7824000" />
+      <workItem from="1539717689004" duration="8045000" />
+      <workItem from="1539727473037" duration="369000" />
+      <workItem from="1539738945552" duration="1971000" />
     </task>
     <servers />
   </component>
@@ -746,23 +769,35 @@
     <history-entry file="Project2Test_insertAndShiftTest - 2018.10.16 at 16h 37m 37s.xml">
       <configuration name="Project2Test.insertAndShiftTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="Project2Test_insertAndShiftTest - 2018.10.16 at 17h 02m 36s.xml">
+      <configuration name="Project2Test.insertAndShiftTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Project2Test - 2018.10.16 at 21h 09m 51s.xml">
+      <configuration name="Project2Test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Project2Test - 2018.10.16 at 21h 11m 22s.xml">
+      <configuration name="Project2Test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Project2Test - 2018.10.16 at 21h 12m 01s.xml">
+      <configuration name="Project2Test" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8208000" />
+    <option name="totallyTimeSpent" value="10769000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1680" height="973" extended-state="6" />
+    <frame x="0" y="22" width="840" height="973" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25274727" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.25885227" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32983682" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.3997669" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4993895" visible="true" weight="0.32983682" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3997669" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -771,17 +806,17 @@
       <window_info anchor="bottom" id="Graph Database Console" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.50061053" side_tool="true" weight="0.32983682" />
       <window_info anchor="bottom" id="Statistic" order="13" />
       <window_info anchor="bottom" id="Database Changes" order="14" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="15" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="15" weight="0.32983682" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Graph Database" order="4" />
       <window_info anchor="right" id="Maven Projects" order="5" />
-      <window_info anchor="right" id="Gradle" order="6" visible="true" weight="0.13919415" />
+      <window_info anchor="right" id="Gradle" order="6" weight="0.13919415" />
       <window_info anchor="right" id="SciView" order="7" />
       <window_info anchor="right" id="Database" order="8" />
       <window_info anchor="right" id="Palette&#9;" order="9" />
@@ -798,20 +833,102 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/Project2Test.java</url>
-          <line>44</line>
+          <line>66</line>
           <properties />
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/Project2.java</url>
-          <line>38</line>
+          <line>59</line>
           <properties />
-          <option name="timeStamp" value="6" />
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="8" selection-start-column="8" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../project2/gradle/.gradle/buildOutputCleanup/cache.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../project2/.idea/compiler.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../project2/gradle/.gradle/vcsWorkingDirs/gc.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gradle/vcsWorkingDirs/gc.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../project2/gradle/gradle/wrapper/gradle-wrapper.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../project2/.idea/modules/gradle.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../project2/.idea/gradle.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/gradle.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gradlew">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gradlew.bat">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../project2/.idea/misc.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../project2/.idea/modules.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/production/classes/Project2.class">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../project2/project2.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../project2/src/Project2.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/test/classes/Project2Test.class">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/settings.gradle">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/uiDesigner.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../project2/.idea/vcs.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../project2/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -819,10 +936,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../project2/src/Project2Test.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/Project2Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="436">
-          <caret line="30" column="25" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
+        <state relative-caret-position="663">
+          <caret line="53" selection-start-line="53" selection-end-line="53" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -831,8 +951,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Project2.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="37" column="33" selection-start-line="37" selection-start-column="33" selection-end-line="37" selection-end-column="33" />
+        <state relative-caret-position="175">
+          <caret line="56" column="31" lean-forward="true" selection-start-line="56" selection-start-column="31" selection-end-line="56" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

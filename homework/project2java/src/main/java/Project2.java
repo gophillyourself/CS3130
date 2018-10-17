@@ -9,8 +9,9 @@ public class Project2 {
     public static void main(String[] args){
         selectionSort(genArray(1000, 1, 10000));
         List<Integer> array = genArray(10, 1, 20);
-        System.out.print(array);
-        System.out.print(insertionSort(array));
+        System.out.println(array);
+        System.out.println(insertionSort(array));
+        System.out.println(bubbleSort(array));
     }
 
     public static List<Integer> selectionSort(List<Integer> array) {
@@ -43,6 +44,26 @@ public class Project2 {
                     sorted.add(j, current);
                     sorted.remove(i + 1);
                     break;
+                }
+            }
+        }
+        return sorted;
+    }
+
+    public static List<Integer> bubbleSort(List<Integer> array) {
+        List<Integer> sorted = new ArrayList<>(array);
+        int size = sorted.size();
+        boolean arrayIsSorted = false;
+        while(!arrayIsSorted) {
+            arrayIsSorted = true;
+            for (int i = 0; i < size-1; i++) {
+                if (sorted.get(i) >= sorted.get(i + 1)) {
+                    if(sorted.get(i) > sorted.get(i + 1)) {
+                        arrayIsSorted = false;
+                    }
+                    Integer temp = sorted.get(i);
+                    sorted.set(i, sorted.get(i + 1));
+                    sorted.set(i + 1, temp);
                 }
             }
         }
