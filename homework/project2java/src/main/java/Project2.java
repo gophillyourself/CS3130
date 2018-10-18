@@ -8,10 +8,12 @@ public class Project2 {
 
     public static void main(String[] args){
         selectionSort(genArray(1000, 1, 10000));
-        List<Integer> array = genArray(10, 1, 20);
+        List<Integer> array = genArray(11, 1, 20);
         System.out.println(array);
         System.out.println(insertionSort(array));
         System.out.println(bubbleSort(array));
+        System.out.println(bubbleSortWithSwapCount(array));
+        System.out.println(quickSort(array, 0, array.size()-1));
     }
 
     public static List<Integer> selectionSort(List<Integer> array) {
@@ -61,13 +63,57 @@ public class Project2 {
                     if(sorted.get(i) > sorted.get(i + 1)) {
                         arrayIsSorted = false;
                     }
-                    Integer temp = sorted.get(i);
-                    sorted.set(i, sorted.get(i + 1));
-                    sorted.set(i + 1, temp);
+                    swapElements(sorted, i, i + 1);
                 }
             }
         }
         return sorted;
+    }
+
+    public static List<Integer> bubbleSortWithSwapCount(List<Integer> array) {
+        List<Integer> sorted = new ArrayList<>(array);
+        int size = sorted.size();
+        int swaps = 0;
+        int maxSwaps = size * (size - 1) / 2;
+        while(swaps < maxSwaps) {
+            for (int i = 0; i < size-1; i++) {
+                if (sorted.get(i) >= sorted.get(i + 1)) {
+                    swapElements(sorted, i, i + 1);
+                    swaps++;
+                }
+            }
+        }
+        return sorted;
+    }
+
+    public static List<Integer> quickSort(List<Integer> array, Integer leftMost, Integer rightMost) {
+        Integer pivot = rightMost;
+        if (leftMost <= rightMost) {
+            pivot = partition(array, leftMost, rightMost);
+            quickSort(array, leftMost, pivot - 1);
+            quickSort(array, pivot + 1, rightMost);
+        }
+        return array;
+    }
+
+    public static Integer partition(List<Integer> array, Integer leftMost, Integer rightMost) {
+        Integer pivot = array.get(rightMost);
+        Integer i = leftMost;
+        for (int j = leftMost; j < rightMost - 1; j++) {
+            Integer arrayJ = array.get(j);
+            if (arrayJ <= pivot) {
+                i++;
+                swapElements(array, i, j);
+            }
+        }
+        swapElements(array, i, rightMost);
+        return i + 1;
+    }
+
+    private static void swapElements(List<Integer> array, Integer i, int j) {
+        Integer temp = array.get(i);
+        array.set(i, array.get(j));
+        array.set(j, temp);
     }
 
     public static List<Integer> genArray(Integer size, Integer min, Integer max) {

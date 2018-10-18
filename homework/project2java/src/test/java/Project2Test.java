@@ -43,8 +43,20 @@ class Project2Test {
     }
 
     @Test
-    public void bubbleSort() {
+    public void bubbleSortTest() {
         List<Integer> sorted = Project2.bubbleSort(unsorted);
+        checkSorted(sorted);
+        checkContaining(sorted, unsorted);
+
+        //just to make sure they aren't getting deep copied when getting sorted
+        //if they did the check containing would be pointless
+        assertTrue(!sorted.equals(unsorted));
+        System.out.println(sorted);
+    }
+
+    @Test
+    public void bubbleSortWithSwapTest() {
+        List<Integer> sorted = Project2.bubbleSortWithSwapCount(unsorted);
         checkSorted(sorted);
         checkContaining(sorted, unsorted);
 
