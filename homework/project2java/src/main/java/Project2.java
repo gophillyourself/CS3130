@@ -1,5 +1,6 @@
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -128,16 +129,16 @@ public class Project2 {
         final Integer LARGEST_INT = 2147483647;
         Integer n = middle - leftMost + 1;
         Integer m = rightMost - middle;
-        List<Integer> leftArray = new ArrayList<>();
-        List<Integer> rightArray = new ArrayList<>();
+        List<Integer> leftArray = new ArrayList<Integer>(Collections.nCopies(n + 1, 0));
+        List<Integer> rightArray = new ArrayList<Integer>(Collections.nCopies(m + 1, 0));
         for (int i = 0; i < n; i++) {
             leftArray.set(i, array.get(leftMost + i -1));
         }
         for (int i = 0; i < m; i++) {
             rightArray.set(i, array.get(middle+i));
         }
-        leftArray.add(LARGEST_INT);
-        rightArray.add(LARGEST_INT);
+        leftArray.set(n, LARGEST_INT);
+        rightArray.add(m, LARGEST_INT);
         Integer i = 0;
         Integer j = 0;
         for (int k = leftMost; k < rightMost; k++) {
