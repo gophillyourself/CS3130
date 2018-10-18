@@ -14,6 +14,7 @@ public class Project2 {
         System.out.println(bubbleSort(array));
         System.out.println(bubbleSortWithSwapCount(array));
         System.out.println(quickSort(array, 0, array.size()-1));
+        System.out.println(mergeSort(array, 0, array.size()-1));
     }
 
     public static List<Integer> selectionSort(List<Integer> array) {
@@ -87,8 +88,8 @@ public class Project2 {
     }
 
     public static List<Integer> quickSort(List<Integer> array, Integer leftMost, Integer rightMost) {
-        Integer pivot = rightMost;
-        if (leftMost <= rightMost) {
+        Integer pivot;
+        if (leftMost < rightMost) {
             pivot = partition(array, leftMost, rightMost);
             quickSort(array, leftMost, pivot - 1);
             quickSort(array, pivot + 1, rightMost);
@@ -99,15 +100,55 @@ public class Project2 {
     public static Integer partition(List<Integer> array, Integer leftMost, Integer rightMost) {
         Integer pivot = array.get(rightMost);
         Integer i = leftMost;
-        for (int j = leftMost; j < rightMost - 1; j++) {
+        for (int j = leftMost; j <= rightMost - 1; j++) {
             Integer arrayJ = array.get(j);
-            if (arrayJ <= pivot) {
+            if (arrayJ < pivot) {
+                if (i != j) {
+                    swapElements(array, i, j);
+                }
                 i++;
-                swapElements(array, i, j);
             }
         }
         swapElements(array, i, rightMost);
-        return i + 1;
+        return i;
+    }
+
+    public static List<Integer> mergeSort(List<Integer> array, Integer leftMost, Integer rightMost) {
+        Integer middle;
+        if (leftMost < rightMost) {
+            middle = (leftMost + rightMost) / 2;
+            mergeSort(array, leftMost, middle);
+            mergeSort(array, middle + 1, rightMost);
+            merge(array, leftMost, middle, rightMost);
+        }
+        return array;
+    }
+
+    public static void merge(List<Integer> array, Integer leftMost, Integer middle, Integer rightMost) {
+        final Integer LARGEST_INT = 2147483647;
+        Integer n = middle - leftMost + 1;
+        Integer m = rightMost - middle;
+        List<Integer> leftArray = new ArrayList<>();
+        List<Integer> rightArray = new ArrayList<>();
+        for (int i = 0; i < n; i++) {
+            leftArray.set(i, array.get(leftMost + i -1));
+        }
+        for (int i = 0; i < m; i++) {
+            rightArray.set(i, array.get(middle+i));
+        }
+        leftArray.add(LARGEST_INT);
+        rightArray.add(LARGEST_INT);
+        Integer i = 0;
+        Integer j = 0;
+        for (int k = leftMost; k < rightMost; k++) {
+            if (leftArray.get(i) < rightArray.get(j)) {
+                array.set(k, leftArray.get(i));
+                i++;
+            } else {
+                array.set(k, rightArray.get(j));
+                j++;
+            }
+        }
     }
 
     private static void swapElements(List<Integer> array, Integer i, int j) {

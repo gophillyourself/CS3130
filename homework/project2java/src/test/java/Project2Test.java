@@ -66,6 +66,18 @@ class Project2Test {
         System.out.println(sorted);
     }
 
+    @Test
+    public void quickSortTest() {
+        List<Integer> sorted = Project2.quickSort(unsorted, 0, unsorted.size());
+        checkSorted(sorted);
+        checkContaining(sorted, unsorted);
+
+        //just to make sure they aren't getting deep copied when getting sorted
+        //if they did the check containing would be pointless
+        assertTrue(!sorted.equals(unsorted));
+        System.out.println(sorted);
+    }
+
     private void checkSorted(List<Integer> sorted) {
         for (int i = 0; i < sorted.size() -1; i++) {
             assertTrue(sorted.get(i) <= sorted.get(i+1),
