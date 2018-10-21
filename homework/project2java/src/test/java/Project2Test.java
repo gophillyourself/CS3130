@@ -3,6 +3,8 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -68,7 +70,21 @@ class Project2Test {
 
     @Test
     public void quickSortTest() {
-        List<Integer> sorted = Project2.quickSort(unsorted, 0, unsorted.size());
+        List<Integer> newUnsorted = new ArrayList<>(unsorted);
+        List<Integer> sorted = Project2.quickSort(newUnsorted, 0, newUnsorted.size() - 1);
+        checkSorted(sorted);
+        checkContaining(sorted, unsorted);
+
+        //just to make sure they aren't getting deep copied when getting sorted
+        //if they did the check containing would be pointless
+        assertTrue(!sorted.equals(unsorted));
+        System.out.println(sorted);
+    }
+
+    @Test
+    public void mergeSortTest() {
+        Integer[] unsortedArray = unsorted.toArray(new Integer[0]);
+        List<Integer> sorted = Arrays.asList(Project2.mergeSort(unsortedArray, 0, unsorted.size() - 1));
         checkSorted(sorted);
         checkContaining(sorted, unsorted);
 

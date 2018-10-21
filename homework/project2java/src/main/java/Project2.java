@@ -1,6 +1,5 @@
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.Collections;
+import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -15,7 +14,8 @@ public class Project2 {
         System.out.println(bubbleSort(array));
         System.out.println(bubbleSortWithSwapCount(array));
         System.out.println(quickSort(array, 0, array.size()-1));
-        System.out.println(mergeSort(array, 0, array.size()-1));
+        Integer[] arrayAsArray = array.toArray(new Integer[0]);
+        printArray(mergeSort(arrayAsArray, 0, array.size()-1));
     }
 
     public static List<Integer> selectionSort(List<Integer> array) {
@@ -114,41 +114,59 @@ public class Project2 {
         return i;
     }
 
-    public static List<Integer> mergeSort(List<Integer> array, Integer leftMost, Integer rightMost) {
-        Integer middle;
+    public static Integer[] mergeSort(Integer[] array, Integer leftMost, Integer rightMost) {
         if (leftMost < rightMost) {
-            middle = (leftMost + rightMost) / 2;
+            Integer middle = (leftMost+rightMost)/2;
+
             mergeSort(array, leftMost, middle);
-            mergeSort(array, middle + 1, rightMost);
+            mergeSort(array , middle+1, rightMost);
+
             merge(array, leftMost, middle, rightMost);
         }
         return array;
     }
 
-    public static void merge(List<Integer> array, Integer leftMost, Integer middle, Integer rightMost) {
-        final Integer LARGEST_INT = 2147483647;
-        Integer n = middle - leftMost + 1;
-        Integer m = rightMost - middle;
-        List<Integer> leftArray = new ArrayList<Integer>(Collections.nCopies(n + 1, 0));
-        List<Integer> rightArray = new ArrayList<Integer>(Collections.nCopies(m + 1, 0));
-        for (int i = 0; i < n; i++) {
-            leftArray.set(i, array.get(leftMost + i -1));
+    public static void merge(Integer array[], Integer leftMost, Integer middle, Integer rightMost) {
+        Integer n1 = middle - leftMost + 1;
+        Integer n2 = rightMost - middle;
+
+        Integer leftArray[] = new Integer [n1];
+        Integer rightArray[] = new Integer [n2];
+
+        for (Integer i=0; i<n1; ++i) {
+            leftArray[i] = array[leftMost + i];
         }
-        for (int i = 0; i < m; i++) {
-            rightArray.set(i, array.get(middle+i));
+
+        for (Integer j=0; j<n2; ++j) {
+            rightArray[j] = array[middle + 1 + j];
         }
-        leftArray.set(n, LARGEST_INT);
-        rightArray.add(m, LARGEST_INT);
+
         Integer i = 0;
         Integer j = 0;
-        for (int k = leftMost; k < rightMost; k++) {
-            if (leftArray.get(i) < rightArray.get(j)) {
-                array.set(k, leftArray.get(i));
+
+        Integer k = leftMost;
+        while (i < n1 && j < n2) {
+            if (leftArray[i] <= rightArray[j]) {
+                array[k] = leftArray[i];
                 i++;
-            } else {
-                array.set(k, rightArray.get(j));
+            }
+            else {
+                array[k] = rightArray[j];
                 j++;
             }
+            k++;
+        }
+
+        while (i < n1) {
+            array[k] = leftArray[i];
+            i++;
+            k++;
+        }
+
+        while (j < n2) {
+            array[k] = rightArray[j];
+            j++;
+            k++;
         }
     }
 
@@ -157,6 +175,11 @@ public class Project2 {
         array.set(i, array.get(j));
         array.set(j, temp);
     }
+
+    private static void printArray(Integer arr[]) {
+        System.out.println(Arrays.asList(arr));
+    }
+
 
     public static List<Integer> genArray(Integer size, Integer min, Integer max) {
         ArrayList<Integer> unsortedArray = new ArrayList<>();
