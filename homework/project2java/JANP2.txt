@@ -774,3 +774,65 @@ public class Project2 {
         }
     }
 }
+
+OUTPUT:
+/usr/lib/jvm/java-8-openjdk-amd64/bin/java -javaagent:/home/phill/.local/share/JetBrains/Toolbox/apps/IDEA-C/ch-0/182.4505.22/lib/idea_rt.jar=38371:/home/phill/.local/share/JetBrains/Toolbox/apps/IDEA-C/ch-0/182.4505.22/bin -Dfile.encoding=UTF-8 -classpath /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/charsets.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/cldrdata.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/dnsns.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/icedtea-sound.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/jaccess.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/java-atk-wrapper.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/localedata.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/nashorn.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/sunec.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/sunjce_provider.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/sunpkcs11.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/zipfs.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jce.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jsse.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/management-agent.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/resources.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar:/home/phill/school/CS3130/homework/project2java/out/production/classes:/home/phill/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.3.1/junit-jupiter-api-5.3.1.jar:/home/phill/.m2/repository/org/apiguardian/apiguardian-api/1.0.0/apiguardian-api-1.0.0.jar:/home/phill/.m2/repository/org/opentest4j/opentest4j/1.1.1/opentest4j-1.1.1.jar:/home/phill/.m2/repository/org/junit/platform/junit-platform-commons/1.3.1/junit-platform-commons-1.3.1.jar Project2
+Project 2 Output
+[Sorting Algorithm] [Array Paramater Info],[Running time in nanoseconds]
+{Bubble Sort One Hundred Integers,2340277
+ Bubble Sort One Hundred Sorted Integers,87578
+ Bubble Sort One Hundred semiSorted Integers,55402
+ Bubble Sort One Thousand Integers,36158542
+ Bubble Sort One Thousand Sorted Integers,3570585
+ Bubble Sort One Thousand semiSorted Integers,3687019
+ Bubble Sort Ten Thousand Integers,720552569
+ Bubble Sort Ten Thousand Sorted Integers,365890163
+ Bubble Sort Ten Thousand semiSorted Integers,364328717
+ Bubble Sort with Swap Count One Hundred Integers,2352939
+ Bubble Sort with Swap Count One Hundred Sorted Integers,76115
+ Bubble Sort with Swap Count One Hundred semiSorted Integers,3196
+ Bubble Sort with Swap Count One Thousand Integers,48218986
+ Bubble Sort with Swap Count One Thousand Sorted Integers,14510
+ Bubble Sort with Swap Count One Thousand semiSorted Integers,20141
+ Bubble Sort with Swap Count Ten Thousand Integers,1655832010
+ Bubble Sort with Swap Count Ten Thousand Sorted Integers,159855
+ Bubble Sort with Swap Count Ten Thousand semiSorted Integers,312103
+ Insertion Sort One Hundred Integers,60212
+ Insertion Sort One Hundred Sorted Integers,21443
+ Insertion Sort One Hundred semiSorted Integers,31183
+ Insertion Sort One Thousand Integers,712859
+ Insertion Sort One Thousand Sorted Integers,487260
+ Insertion Sort One Thousand semiSorted Integers,539467
+ Insertion Sort Ten Thousand Integers,72014508
+ Insertion Sort Ten Thousand Sorted Integers,65320081
+ Insertion Sort Ten Thousand semiSorted Integers,63007301
+ Merge Sort One Hundred Integers,1155576
+ Merge Sort One Hundred Sorted Integers,75172
+ Merge Sort One Hundred semiSorted Integers,67296
+ Merge Sort One Thousand Integers,7258064
+ Merge Sort One Thousand Sorted Integers,878313
+ Merge Sort One Thousand semiSorted Integers,833963
+ Merge Sort Ten Thousand Integers,9450255
+ Merge Sort Ten Thousand Sorted Integers,9453833
+ Merge Sort Ten Thousand semiSorted Integers,9287946
+ Quick Sort One Hundred Integers,239716
+ Quick Sort One Hundred Sorted Integers,120574
+ Quick Sort One Hundred semiSorted Integers,45863
+ Quick Sort One Thousand Integers,3731406
+ Quick Sort One Thousand Sorted Integers,10464935
+ Quick Sort One Thousand semiSorted Integers,3945559
+ Quick Sort Ten Thousand Integers,4627244
+ Quick Sort Ten Thousand Sorted Integers,376676526
+ Quick Sort Ten Thousand semiSorted Integers,286523626
+ Selection Sort One Hundred Integers,886852
+ Selection Sort One Hundred Sorted Integers,64451
+ Selection Sort One Hundred semiSorted Integers,37396
+ Selection Sort One Thousand Integers,17377600
+ Selection Sort One Thousand Sorted Integers,2213129
+ Selection Sort One Thousand semiSorted Integers,2221025
+ Selection Sort Ten Thousand Integers,133593636
+ Selection Sort Ten Thousand Sorted Integers,259173774
+ Selection Sort Ten Thousand semiSorted Integers,244965256}
+
+Process finished with exit code 0
+
