@@ -1,0 +1,251 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.15)  22 OCT 2018 21:34
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**project2analysis.tex
+(./project2analysis.tex
+LaTeX2e <2017-04-15>
+Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+(./project2analysis.aux)
+\openout1 = `project2analysis.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count87
+\scratchdimen=\dimen105
+\scratchbox=\box26
+\nofMPsegments=\count88
+\nofMParguments=\count89
+\everyMPshowfont=\toks15
+\MPscratchCnt=\count90
+\MPscratchDim=\dimen106
+\MPnumerator=\count91
+\makeMPintoPDFobject=\count92
+\everyMPtoPDFconversion=\toks16
+) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)))
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2018/01/21 v0.26 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 13.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 13.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 13.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 17.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 17.
+
+Overfull \hbox (10.93852pt too wide) in paragraph at lines 17--34
+ [] 
+ []
+
+<randomIntegerTimes.png, id=1, 867.24pt x 487.8225pt>
+File: randomIntegerTimes.png Graphic file (type png)
+<use randomIntegerTimes.png>
+Package pdftex.def Info: randomIntegerTimes.png  used on input line 37.
+(pdftex.def)             Requested size: 607.06387pt x 341.47342pt.
+<sorted.png, id=2, 867.24pt x 487.8225pt>
+File: sorted.png Graphic file (type png)
+<use sorted.png>
+Package pdftex.def Info: sorted.png  used on input line 38.
+(pdftex.def)             Requested size: 607.06387pt x 341.47342pt.
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+<semisorted.png, id=14, 867.24pt x 487.8225pt>
+File: semisorted.png Graphic file (type png)
+<use semisorted.png>
+Package pdftex.def Info: semisorted.png  used on input line 39.
+(pdftex.def)             Requested size: 607.06387pt x 341.47342pt.
+ [2 <./randomIntegerTimes.png (PNG copy)>]
+<random100.png, id=18, 867.24pt x 487.8225pt>
+File: random100.png Graphic file (type png)
+<use random100.png>
+Package pdftex.def Info: random100.png  used on input line 40.
+(pdftex.def)             Requested size: 433.61894pt x 243.91064pt.
+ [3 <./sorted.png (PNG copy)>]
+<random1000.png, id=22, 867.24pt x 487.8225pt>
+File: random1000.png Graphic file (type png)
+<use random1000.png>
+Package pdftex.def Info: random1000.png  used on input line 41.
+(pdftex.def)             Requested size: 433.61894pt x 243.91064pt.
+ [4 <./semisorted.png (PNG copy)>]
+<random10000.png, id=26, 867.24pt x 487.8225pt>
+File: random10000.png Graphic file (type png)
+<use random10000.png>
+Package pdftex.def Info: random10000.png  used on input line 42.
+(pdftex.def)             Requested size: 433.61894pt x 243.91064pt.
+<Sorted100.png, id=27, 867.24pt x 487.8225pt>
+File: Sorted100.png Graphic file (type png)
+<use Sorted100.png>
+Package pdftex.def Info: Sorted100.png  used on input line 43.
+(pdftex.def)             Requested size: 433.61894pt x 243.91064pt.
+ [5 <./random100.png (PNG copy)> <./random1000.png (PNG copy)>]
+<Sorted1000.png, id=31, 867.24pt x 487.8225pt>
+File: Sorted1000.png Graphic file (type png)
+<use Sorted1000.png>
+Package pdftex.def Info: Sorted1000.png  used on input line 44.
+(pdftex.def)             Requested size: 433.61894pt x 243.91064pt.
+<Sorted10000.png, id=32, 867.24pt x 488.57532pt>
+File: Sorted10000.png Graphic file (type png)
+<use Sorted10000.png>
+Package pdftex.def Info: Sorted10000.png  used on input line 45.
+(pdftex.def)             Requested size: 433.61894pt x 244.28706pt.
+ [6 <./random10000.png (PNG copy)> <./Sorted100.png (PNG copy)>]
+File: Sorted10000.png Graphic file (type png)
+<use Sorted10000.png>
+Package pdftex.def Info: Sorted10000.png  used on input line 46.
+(pdftex.def)             Requested size: 433.61894pt x 244.28706pt.
+<semiSorted100.png, id=36, 867.24pt x 487.8225pt>
+File: semiSorted100.png Graphic file (type png)
+<use semiSorted100.png>
+Package pdftex.def Info: semiSorted100.png  used on input line 47.
+(pdftex.def)             Requested size: 433.61894pt x 243.91064pt.
+ [7 <./Sorted1000.png (PNG copy)> <./Sorted10000.png (PNG copy)>]
+<semiSorted1000.png, id=41, 867.24pt x 487.8225pt>
+File: semiSorted1000.png Graphic file (type png)
+<use semiSorted1000.png>
+Package pdftex.def Info: semiSorted1000.png  used on input line 48.
+(pdftex.def)             Requested size: 433.61894pt x 243.91064pt.
+<semiSorted10000.png, id=42, 867.24pt x 487.8225pt>
+File: semiSorted10000.png Graphic file (type png)
+<use semiSorted10000.png>
+Package pdftex.def Info: semiSorted10000.png  used on input line 49.
+(pdftex.def)             Requested size: 433.61894pt x 243.91064pt.
+ [8 <./semiSorted100.png (PNG copy)>]
+Overfull \hbox (18.00069pt too wide) in paragraph at lines 54--168
+[]
+ []
+
+[9 <./semiSorted1000.png (PNG copy)> <./semiSorted10000.png (PNG copy)>]
+[10] [11] [12] (./project2analysis.aux) ) 
+Here is how much of TeX's memory you used:
+ 1497 strings out of 492982
+ 21777 string characters out of 6134895
+ 85412 words of memory out of 5000000
+ 5061 multiletter control sequences out of 15000+600000
+ 7280 words of font info for 26 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 41i,8n,25p,573b,188s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+r17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb>
+
+Output written on project2analysis.pdf (12 pages, 547183 bytes).
+PDF statistics:
+ 79 PDF objects out of 1000 (max. 8388607)
+ 46 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 61 words of extra memory for PDF output out of 10000 (max. 10000000)
+
