@@ -1,0 +1,57 @@
+\documentclass[12pt,largemargins]{homework}
+
+  \newcommand{\hwname}{Phillip Janowski}
+  \newcommand{\hwemail}{pajmc2@mail.umsl.edu}
+  \newcommand{\hwtype}{Homework}
+  \newcommand{\hwnum}{3}
+  \newcommand{\hwlecture}{E}
+  \newcommand{\hwsection}{01}
+  \newcommand{\hwclass}{CS3130}
+
+\usepackage{graphicx}
+\usepackage{makecell}
+\usepackage{enumitem}
+\usepackage{multirow}
+\usepackage{amsmath}
+\usepackage{listings}
+\usepackage{forest}
+
+\begin{document}
+\maketitle
+\question
+6.1-1\\
+What are the minimum and maximum numbers of elements in a heap of height $ h $\\
+Minimum will be a heap with only one node in its bottom level\\
+\begin{center}
+$ 2^0 + 2^1 + 2^2 + ... + 2^{h-1} + 1 $\\
+$ \frac{2^{h} - 1 }{2 - 1} + 1 = 2^h$\\
+\end{center}
+Maximum is a heap with the bottom node full\\
+\begin{center}
+$ 2^0 + 2^1 + 2^2 + ... + 2^{h}$\\
+$ \frac{2^{h+1} - 1}{2 - 1}  = 2^{h + 1} -1$\\
+\end{center}
+\question
+6.2-2\\
+What is the effect of calling Max-Heapify(A,i) when the element A[i] is larger than its children?\\
+
+No effect. The three if conditions,
+\begin{center}
+if $ l \leq A.heap - size $ and $ A[l] >A[i] $,\\
+if $ r \leq A.heap - size $ and $ A[r] > A[largest] $\\
+if $ largest \neq i $ \\
+\end{center}
+all fail and nothing changes.\\
+
+\question
+6.2-4\\
+What is the effect of calling Max-Heapify(A, i) for $ i > A.heap-size/2$?\\
+
+If $ i > A.heap-size/2 $, then node $ i $ is either in the lowest or second lowest level of the tree and does not have any children. Whene LEFT($ i $) and RIGHT($ i $) are called the array index that gets called will be out of bounds.\\
+
+\question
+
+6.4-1\\
+
+\end{document}
+
