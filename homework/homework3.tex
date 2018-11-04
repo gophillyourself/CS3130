@@ -754,6 +754,401 @@ A <5, 13, 2, 25, 7, 17, 20, 8, 4>\\
 Sorted A = <2, 4, 5, 7, 8, 13, 17, 20, 25>\\
 \end{center}
 \question
+6.4-3\\
+What is the running time of HEAPSORT on an array A of length n that is already
+sorted in increasing order? What about decreasing order?\\
+HEAPSORT will be $ O(n \log(n)) $ for both increasing and decreasing order sorted order.\\
+For increasing, BUILD-MAX-HEAP will have a max run time of $ \Theta(n) $ and each MAX-HEAPIFY(A,1) will take at most $ O(\log(n)) $ which results in $ O(n \log(n)) $\\
+For decreasing, MAX-HEAPIFY(A, i) will result in $ O(1) $ but the BUILD-MAX-HEAP will result in $ \Theta(n) $ run time because there will be $ [n/2] $ calls of MAX-HEAPIFY. Also, there will be $ n-1 $ calls of MAX-HEAPIFY(A, 1) will result in $ O(\log(n)) $ resulting in $ O(n \log(n)) $ run time.\\
+\question
+Give an example to show that a heapsort algorithm is not stable.\\
+A = <1, 2, 2(1)>, here 2 and 2(1) will be equal.\\
+\begin{center}
+\begin{forest}
+	[1
+		[2]
+		[2(1)]
+	]
+\end{forest}
+\begin{forest}
+	[2
+		[1]
+		[2(1)]
+	]
+\end{forest}
+\begin{forest}
+	[2(1)
+		[1]
+		[|2|]
+	]
+\end{forest}
+\begin{forest}
+	[1
+		[|2(1)|]
+		[|2|]
+	]
+\end{forest}
+\begin{forest}
+	[|1|
+		[|2(1)|]
+		[|2|]
+	]
+\end{forest}
+\end{center}
+This shows A = <1, 2, 2(1)>, when sorted by HEAPSORT, will result in <1, 2(1), 2>\\
+\question
+6.5-2\\
+Illustrate the operation of MAX-HEAP-INSERT(A, 10) on the heap A <15, 13, 9, 5, 12, 8, 7, 4, 0, 6, 2>.\\
+\begin{center}
+\begin{forest}
+	[15
+		[13
+			[5
+				[4]
+				[0]
+			]
+			[12
+				[6]
+				[2]
+			]
+		]
+		[9
+			[8
+				[1]
+			]
+			[7]
+		]
+	]
+\end{forest}
+\begin{forest}
+	[15
+		[13
+			[5
+				[4]
+				[0]
+			]
+			[12
+				[6]
+				[2]
+			]
+		]
+		[9
+			[8
+				[1]
+				[10]
+			]
+			[7]
+		]
+	]
+\end{forest}
+\begin{forest}
+	[15
+		[13
+			[5
+				[4]
+				[0]
+			]
+			[12
+				[6]
+				[2]
+			]
+		]
+		[9
+			[10
+				[1]
+				[8]
+			]
+			[7]
+		]
+	]
+\end{forest}
+\begin{forest}
+	[15
+		[13
+			[5
+				[4]
+				[0]
+			]
+			[12
+				[6]
+				[2]
+			]
+		]
+		[10
+			[9
+				[1]
+				[8]
+			]
+			[7]
+		]
+	]
+\end{forest}
+\end{center}
+\question
+In the sequence below, the character means ‘insert into priority queue’ operation; the asterisk ‘*’ means ‘extract the maximum from a priority queue’ operation. Show the heap in the end of each operation: R  E  A  L  I  *  T  *  *  Y  S  H  *  O  W  *  *\\
+\begin{center}
+\begin{forest}
+	[R]
+\end{forest}
+\begin{forest}
+	[R
+		[E]
+	]
+\end{forest}
+\begin{forest}
+	[R
+		[E]
+		[A]
+	]
+\end{forest}
+\begin{forest}
+	[R
+		[E
+			[L]
+		]
+		[A]
+	]
+\end{forest}
+\begin{forest}
+	[R
+		[L
+			[E]
+		]
+		[A]
+	]
+\end{forest}
+\begin{forest}
+	[R
+		[L
+			[E]
+			[I]
+		]
+		[A]
+	]
+\end{forest}
+\begin{forest}
+	[I
+		[L
+			[E]
+		]
+		[A]
+	]
+\end{forest}
+\begin{forest}
+	[L
+		[I
+			[E]
+		]
+		[A]
+	]
+\end{forest}
+\begin{forest}
+	[L
+		[I
+			[E]
+			[T]
+		]
+		[A]
+	]
+\end{forest}
+\begin{forest}
+	[L
+		[T
+			[E]
+			[I]
+		]
+		[A]
+	]
+\end{forest}
+\begin{forest}
+	[T
+		[L
+			[E]
+			[I]
+		]
+		[A]
+	]
+\end{forest}
+\begin{forest}
+	[I
+		[L
+			[E]
+		]
+		[A]
+	]
+\end{forest}
+\begin{forest}
+	[L
+		[I
+			[E]
+		]
+		[A]
+	]
+\end{forest}
+\begin{forest}
+	[E
+		[I]
+		[A]
+	]
+\end{forest}
+\begin{forest}
+	[I
+		[E]
+		[A]
+	]
+\end{forest}
+\begin{forest}
+	[I
+		[E
+			[Y]
+		]
+		[A]
+	]
+\end{forest}
+\begin{forest}
+	[I
+		[Y
+			[E]
+		]
+		[A]
+	]
+\end{forest}
+\begin{forest}
+	[Y
+		[I
+			[E]
+		]
+		[A]
+	]
+\end{forest}
+\begin{forest}
+	[Y
+		[I
+			[E]
+			[S]
+		]
+		[A]
+	]
+\end{forest}
+\begin{forest}
+	[Y
+		[S
+			[E]
+			[I]
+		]
+		[A]
+	]
+\end{forest}
+\begin{forest}
+	[Y
+		[S
+			[E]
+			[I]
+		]
+		[A
+			[H]
+		]
+	]
+\end{forest}
+\begin{forest}
+	[Y
+		[S
+			[E]
+			[I]
+		]
+		[H
+			[A]
+		]
+	]
+\end{forest}
+\begin{forest}
+	[A
+		[S
+			[E]
+			[I]
+		]
+		[H]
+	]
+\end{forest}
+\begin{forest}
+	[S
+		[I
+			[E]
+			[A]
+		]
+		[H]
+	]
+\end{forest}
+\begin{forest}
+	[S
+		[I
+			[E]
+			[A]
+		]
+		[H
+			[O]
+		]
+	]
+\end{forest}
+\begin{forest}
+	[S
+		[I
+			[E]
+			[A]
+		]
+		[O
+			[H]
+		]
+	]
+\end{forest}
+\begin{forest}
+	[S
+		[I
+			[E]
+			[A]
+		]
+		[O
+			[H]
+			[W]
+		]
+	]
+\end{forest}
+\begin{forest}
+	[W
+		[I
+			[E]
+			[A]
+		]
+		[S
+			[H]
+			[O]
+		]
+	]
+\end{forest}
+\begin{forest}
+	[O
+		[I
+			[E]
+			[A]
+		]
+		[S
+			[H]
+		]
+	]
+\end{forest}
+\begin{forest}
+	[S
+		[I
+			[E]
+			[A]
+		]
+		[O
+			[H]
+		]
+	]
+\end{forest}
+\end{center}
+\question
 You are given a collection of n bolts of different diameters and n corresponding nuts. You are allowed only to try a nut and a bolt together, from which you can determine whether the nut is larger than the bolt, smaller than the bolt or matches the bolt exactly. However, there is no way to compare two nuts together or two bolts together. The problem is to match each bolt to its nut. Design an algorithm to solve this problem that will be similar to a quicksort (use the idea of partitioning).\\ 
 Select a bolt and test every nut to find its match while also partitioning the nuts into a set of nuts that is too large and another for nuts that are too small. When the matching nut is found use that nut to partition the other bolts.\\
 \end{document}
