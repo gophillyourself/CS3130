@@ -12,6 +12,8 @@ public class Node {
         this.right = null;
     }
 
+    static StringJoiner searchString = new StringJoiner(",");
+
     static Node insert(Node root, int key) {
         if(root == null) {
             return new Node(key);
@@ -62,7 +64,7 @@ public class Node {
     }
 
     static Node search(Node root, int key) {
-        System.out.print(root.key + ", ");
+        searchString.add(String.valueOf(root.key));
         if(root == null || root.key == key) {
             return root;
         }
@@ -72,7 +74,50 @@ public class Node {
         return search(root.right, key);
     }
 
-    static Node delete(Node root, int key)
+    static Node deleteKey(int key) {
+        root = delete(root, key);
+        return root;
+    }
+
+    /* A recursive function to insert a new key in BST */
+    static Node delete(Node root, int key) {
+        /* Base Case: If the tree is empty */
+        if (root == null)  return root;
+
+        /* Otherwise, recur down the tree */
+        if (key < root.key) {
+            root.left = delete(root.left, key);
+        } else if (key > root.key) {
+            root.right = delete(root.right, key);
+        } else {
+            if (root.left == null)
+                return root.right;
+            else if (root.right == null)
+                return root.left;
+
+            root.key = minValue(root.right);
+            root.right = delete(root.right, root.key);
+        }
+
+        return root;
+    }
+
+    static int minValue(Node root) {
+        int minv = root.key;
+        while (root.left != null) {
+            minv = root.left.key;
+            root = root.left;
+        }
+        return minv;
+    }
+
+    static void treeToArray(Node root, List<Integer> arr) {
+        if(root != null) {
+            treeToArray(root.left, arr);
+            arr.add(root.key);
+            treeToArray(root.right, arr);
+        }
+    }
 
     @Override
     public String toString() {
