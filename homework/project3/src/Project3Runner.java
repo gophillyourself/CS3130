@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 import java.util.Scanner;
 import java.util.StringJoiner;
 
@@ -27,6 +28,7 @@ public class Project3Runner {
             System.out.println("1. Traversal");
             System.out.println("2. Search");
             System.out.println("3. Delete");
+            System.out.println("4. Print Current List");
             choice = Integer.parseInt(scanner.next());
             switch (choice) {
                 case 0:
@@ -88,15 +90,20 @@ public class Project3Runner {
         }
         intArray.clear();
         Node.treeToArray(deleted, intArray);
+        System.out.println("New Array (Preordered)");
+        System.out.println(intArray);
+        traversal();
     }
 
     private static List<Integer> getIntArray() {
         System.out.println("Enter a digit at a time or -1 to finish");
         System.out.println("Type default to use default values");
+        System.out.println("Type random to generate values");
         int number = 0;
         List<Integer> ret = new ArrayList<>();
         String next = " ";
-        while(number != -1 && !(next).equals("default")) {
+        Boolean handled = false;
+        while(number != -1 && !handled) {
             next = scanner.next();
             try {
                 number = Integer.parseInt(next);
@@ -109,12 +116,34 @@ public class Project3Runner {
                     for (String s : split) {
                         ret.add(Integer.parseInt(s));
                     }
-                    return ret;
+                    handled = true;
+                } else if(next.equals("random")) {
+                    System.out.println("How many random numbers?");
+                    int i = scanner.nextInt();
+                    ret = getRandomIntegerArray(i);
                 }
-                System.out.println("Couldn't parse that, try again");
+                handled = true;
+                if(!handled) {
+                    System.out.println("Couldn't parse that, try again");
+                }
             }
         }
         root = Node.insert(ret);
+        System.out.println("Working with Array: " + ret);
+        return ret;
+    }
+
+    private static List<Integer> getRandomIntegerArray(Integer size) {
+        List<Integer> ret = new ArrayList<>();
+        Random random = new Random();
+        int i = 0;
+        while(i < size) {
+            int randomInt = random.nextInt(100) + 1;
+            if(!ret.contains(randomInt)) {
+                i++;
+                ret.add(randomInt);
+            }
+        }
         return ret;
     }
 }

@@ -113,8 +113,8 @@ public class Node {
 
     static void treeToArray(Node root, List<Integer> arr) {
         if(root != null) {
-            treeToArray(root.left, arr);
             arr.add(root.key);
+            treeToArray(root.left, arr);
             treeToArray(root.right, arr);
         }
     }
