@@ -23,6 +23,7 @@ public class Project3Runner {
 
         int choice = 0;
         while(choice != -1) {
+            //menu
             System.out.println("Choose one: ");
             System.out.println("0. New Array");
             System.out.println("1. Traversal");
@@ -52,6 +53,7 @@ public class Project3Runner {
     }
 
     private static void traversal() {
+        //printing traversals
         root = Node.insert(intArray);
         System.out.println("Inorder");
         root.inorder(root);

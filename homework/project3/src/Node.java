@@ -39,6 +39,7 @@ public class Node {
         return root;
     }
 
+    //left, root, right
     void inorder(Node root) {
         if(root != null) {
             inorder(root.left);
@@ -47,6 +48,7 @@ public class Node {
         }
     }
 
+    //root, left, right
     void preOrder(Node root) {
         if(root != null) {
             System.out.print(root.key + ", ");
@@ -55,6 +57,7 @@ public class Node {
         }
     }
 
+    //left, right, root
     void postOrder(Node root) {
         if(root != null) {
             postOrder(root.left);
