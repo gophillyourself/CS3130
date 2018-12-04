@@ -64,14 +64,18 @@ public class Node {
     }
 
     static Node search(Node root, int key) {
-        searchString.add(String.valueOf(root.key));
-        if(root == null || root.key == key) {
-            return root;
+        try {
+            searchString.add(String.valueOf(root.key));
+            if (root == null || root.key == key) {
+                return root;
+            }
+            if (root.key > key) {
+                return search(root.left, key);
+            }
+            return search(root.right, key);
+        } catch (NullPointerException e ) {
+            return new Node(-1);
         }
-        if(root.key > key) {
-            return search(root.left, key);
-        }
-        return search(root.right, key);
     }
 
     static Node deleteKey(int key) {
@@ -79,12 +83,11 @@ public class Node {
         return root;
     }
 
-    /* A recursive function to insert a new key in BST */
     static Node delete(Node root, int key) {
-        /* Base Case: If the tree is empty */
-        if (root == null)  return root;
+        if (root == null) {
+            return root;
+        }
 
-        /* Otherwise, recur down the tree */
         if (key < root.key) {
             root.left = delete(root.left, key);
         } else if (key > root.key) {

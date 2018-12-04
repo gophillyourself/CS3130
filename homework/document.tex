@@ -1,0 +1,65 @@
+\documentclass[12pt,largemargins]{homework}
+
+  \newcommand{\hwname}{Phillip Janowski}
+  \newcommand{\hwemail}{pajmc2@mail.umsl.edu}
+  \newcommand{\hwtype}{Homework}
+  \newcommand{\hwnum}{4}
+  \newcommand{\hwlecture}{E}
+  \newcommand{\hwsection}{01}
+  \newcommand{\hwclass}{CS3130}
+
+\usepackage{graphicx}
+\usepackage{makecell}
+\usepackage{enumitem}
+\usepackage{multirow}
+\usepackage{amsmath}
+\usepackage{listings}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows,trees,positioning}
+
+\begin{document}
+\maketitle
+
+\question
+8.2 - 1\\
+$ Evaluate \sum_{k=1}^{n} \lg k $ \\
+Upper Bound $ \lg (n!) = O(n \lg n) $\\
+$ \lg (n!) = O(n \lg n)$ \\
+$ \sum_{k=1}^{n} \lg k \leq \sum_{k=1}^{n} \lg n $\\
+$ = n \lg n$\\
+Lower Bound $ \lg (n!) = \Omega(n \lg n) $\\
+$ \sum_{k=1}^{n} \lg k = \sum_{k=1}^{n/2} + \sum_{k=n/2 + 1}^{n} \lg k \leq \sum_{k=1}^{n/2} \lg 1 + \sum_{k=n/2+1}^{n} \lg (n/2) $\\
+$ = 0 + n/2 * \lg(n/2)$ \\
+$ \therefore \lg(n!) = O(n \lg n)$\\
+\question
+8.3 - 1\\
+$ n! / 2 $\\
+$ All comparison sort algorithms are at worst \Omega(n \lg n) $ or $ n!/2 \leq n! \leq r \leq 2h$\\
+$ h \geq \lg(n!/2) = \lg(n!) - 1 $\\
+$ = \Theta(n \lg n) -1 = \Theta(n \lg n) = \Theta(n \lg n)$ \\
+$ =\Theta(n \lg n) -n = \Theta(n \lg n)$\\
+$ \therefore $ There is no comparison sort with linear run time for $ n!/2 $ of the inputs of array length n \\
+$ 1/n $\\
+$ (1/n)*n! \leq n! \leq r \leq 2^h $\\
+$ h \geq \lg(n!/n) = \lg(n!) - \lg n$\\
+$ =\Theta(n \lg n) - \lg n = \Theta(n \lg n)$\\
+$ \therefore $ There is no comparison sort with linear run time for 1/n of the inputs of array length n \\
+$ 1/2 ^ n $\\
+$ (1/2^n)n! \leq n! \leq r \leq 2^h $\\
+$ h \geq \lg( n!/2^n ) = \lg(n!) -n $\\
+$ =\Theta(n \lg n) -n = \Theta(n \lg n)$\\
+$ \therefore $ There is no comparison sort with linear run time for $ 1/2^n $ of the inputs of array length n \\
+
+\question
+13.1-1
+Inserting {1, 2, 3... 15}\\
+Inserting as {8, 4, 12, 2, 6, 10, 14, 1, 3, 5, 7, 9, 11, 13, 15}\\
+
+\question
+13.1-2
+
+\question
+13.1-4
+
+\end{document}
