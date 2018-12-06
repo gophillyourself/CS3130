@@ -35,7 +35,7 @@ $ \therefore \lg(n!) = O(n \lg n)$\\
 \question
 8.3 - 1\\
 $ n! / 2 $\\
-$ All comparison sort algorithms are at worst \Omega(n \lg n) $ or $ n!/2 \leq n! \leq r \leq 2h$\\
+ All comparison sort algorithms are at worst $ \Omega(n \lg n) $ or $ n!/2 \leq n! \leq r \leq 2h$\\
 $ h \geq \lg(n!/2) = \lg(n!) - 1 $\\
 $ = \Theta(n \lg n) -1 = \Theta(n \lg n) = \Theta(n \lg n)$ \\
 $ =\Theta(n \lg n) -n = \Theta(n \lg n)$\\
@@ -51,6 +51,11 @@ $ h \geq \lg( n!/2^n ) = \lg(n!) -n $\\
 $ =\Theta(n \lg n) -n = \Theta(n \lg n)$\\
 $ \therefore $ There is no comparison sort with linear run time for $ 1/2^n $ of the inputs of array length n \\
 
+\question
+3. Find the lower and upper boundaries for the height of a 2-3-4 tree with n nodes.\\
+The uppper bound of the height is every node having two children and the lower bound would be the height of a tree with every node having four children\\
+Upper $ 2^0 + 2^1 + 2^2 + ... + 2^h \geq n \rightarrow \lg n$ \\
+Lower $ 4^0 + 4^1 + 4^2 + ... + 4^h \geq n \rightarrow \frac{1}{2} \lg n$\\
 \question
 13.1-1
 Inserting {1, 2, 3... 15}\\
