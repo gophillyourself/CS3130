@@ -1,3 +1,137 @@
+import java.util.List;
+import java.util.StringJoiner;
+
+public class Node {
+    int key;
+    static Node root;
+    Node left;
+    Node right;
+    Node(int key) {
+        this.key = key;
+        this.left = null;
+        this.right = null;
+    }
+
+    static StringJoiner searchString = new StringJoiner(",");
+
+    static Node insert(Node root, int key) {
+        if(root == null) {
+            return new Node(key);
+        }
+
+        if(root.key > key) {
+            root.left = insert(root.left, key);
+        } else if( root.key < key) {
+            root.right = insert(root.right, key);
+        }
+        return root;
+    }
+
+    static Node insert(int key) {
+        root = insert(root, key);
+        return root;
+    }
+
+    static Node insert(List<Integer> keys) {
+        for (Integer integer : keys) {
+            root = insert(integer);
+        }
+        return root;
+    }
+
+    void inorder(Node root) {
+        if(root != null) {
+            inorder(root.left);
+            System.out.print(root.key + ", ");
+            inorder(root.right);
+        }
+    }
+
+    void preOrder(Node root) {
+        if(root != null) {
+            System.out.print(root.key + ", ");
+            preOrder(root.left);
+            preOrder(root.right);
+        }
+    }
+
+    void postOrder(Node root) {
+        if(root != null) {
+            postOrder(root.left);
+            postOrder(root.right);
+            System.out.print(root.key + ", ");
+        }
+    }
+
+    static Node search(Node root, int key) {
+        try {
+            searchString.add(String.valueOf(root.key));
+            if (root == null || root.key == key) {
+                return root;
+            }
+            if (root.key > key) {
+                return search(root.left, key);
+            }
+            return search(root.right, key);
+        } catch (NullPointerException e ) {
+            return new Node(-1);
+        }
+    }
+
+    static Node deleteKey(int key) {
+        root = delete(root, key);
+        return root;
+    }
+
+    static Node delete(Node root, int key) {
+        if (root == null) {
+            return root;
+        }
+
+        if (key < root.key) {
+            root.left = delete(root.left, key);
+        } else if (key > root.key) {
+            root.right = delete(root.right, key);
+        } else {
+            if (root.left == null)
+                return root.right;
+            else if (root.right == null)
+                return root.left;
+
+            root.key = minValue(root.right);
+            root.right = delete(root.right, root.key);
+        }
+
+        return root;
+    }
+
+    static int minValue(Node root) {
+        int minv = root.key;
+        while (root.left != null) {
+            minv = root.left.key;
+            root = root.left;
+        }
+        return minv;
+    }
+
+    static void treeToArray(Node root, List<Integer> arr) {
+        if(root != null) {
+            arr.add(root.key);
+            treeToArray(root.left, arr);
+            treeToArray(root.right, arr);
+        }
+    }
+
+    @Override
+    public String toString() {
+        return new StringJoiner(", ", Node.class.getSimpleName() + "[", "]")
+                .add("key=" + key)
+                .add("root=" + root)
+                .add("left=" + left)
+                .add("right=" + right)
+                .toString();
+    }
+}
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -23,7 +157,6 @@ public class Project3Runner {
 
         int choice = 0;
         while(choice != -1) {
-            //menu
             System.out.println("Choose one: ");
             System.out.println("0. New Array");
             System.out.println("1. Traversal");
@@ -53,7 +186,6 @@ public class Project3Runner {
     }
 
     private static void traversal() {
-        //printing traversals
         root = Node.insert(intArray);
         System.out.println("Inorder");
         root.inorder(root);
@@ -150,3 +282,73 @@ public class Project3Runner {
         return ret;
     }
 }
+
+Output 
+Binary Search Tree Project Patent Pending
+Enter a digit at a time or -1 to finish
+Type default to use default values
+Type random to generate values
+default
+Working with Array: [30, 10, 45, 38, 20, 50, 25, 33, 8, 12]
+Choose one: 
+0. New Array
+1. Traversal
+2. Search
+3. Delete
+4. Print Current List
+1
+Inorder
+8, 10, 12, 20, 25, 30, 33, 38, 45, 50,  
+Preorder
+30, 10, 8, 20, 12, 25, 45, 38, 33, 50,  
+Postorder
+8, 12, 25, 20, 10, 33, 38, 50, 45, 30,  
+Choose one: 
+0. New Array
+1. Traversal
+2. Search
+3. Delete
+4. Print Current List
+2
+What key should we find
+38
+38 was found
+Path to found node: 30,45,38
+Choose one: 
+0. New Array
+1. Traversal
+2. Search
+3. Delete
+4. Print Current List
+2
+What key should we find
+9
+9 was not found
+Choose one: 
+0. New Array
+1. Traversal
+2. Search
+3. Delete
+4. Print Current List
+3
+What is the value of the node to delete
+10
+10 was deleted from the binary tree
+New Array (Preordered)
+[30, 12, 8, 20, 25, 45, 38, 33, 50]
+Inorder
+8, 12, 20, 25, 30, 33, 38, 45, 50,  
+Preorder
+30, 12, 8, 20, 25, 45, 38, 33, 50,  
+Postorder
+8, 25, 20, 12, 33, 38, 50, 45, 30,  
+Choose one: 
+0. New Array
+1. Traversal
+2. Search
+3. Delete
+4. Print Current List
+-1
+
+Process finished with exit code 0
+
